@@ -178,7 +178,8 @@ function registerGameSocket(io, socket) {
                         {
                             move,
                             fen: game.fen(),
-                            history: game.history()
+                            history:
+                                game.history()
                         }
                     )
                 }
@@ -192,6 +193,59 @@ function registerGameSocket(io, socket) {
                     )
                 }
             })
+
+            socket.on(
+                "voice-request",
+                () => {
+
+                    socket.to(roomId).emit(
+                        "voice-request"
+                    )
+                }
+            )
+
+            socket.on(
+                "voice-accepted",
+                () => {
+
+                    socket.to(roomId).emit(
+                        "voice-accepted"
+                    )
+                }
+            )
+
+            socket.on(
+                "voice-offer",
+                (offer) => {
+
+                    socket.to(roomId).emit(
+                        "voice-offer",
+                        offer
+                    )
+                }
+            )
+
+            socket.on(
+                "voice-answer",
+                (answer) => {
+
+                    socket.to(roomId).emit(
+                        "voice-answer",
+                        answer
+                    )
+                }
+            )
+
+            socket.on(
+                "ice-candidate",
+                (candidate) => {
+
+                    socket.to(roomId).emit(
+                        "ice-candidate",
+                        candidate
+                    )
+                }
+            )
         }
 
         catch (error) {
