@@ -102,13 +102,44 @@
     <script src="js/game.js"></script>
     <script src="js/board.js"></script>
     <script src="js/timer.js"></script>
-    <script src="js/voice.js"></script>
+    
     <script src="js/ui.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/voice.js"></script>
+    
+      
+    
 
-</body>
+<div
+    id="voice-popup"
+    style="
+        display:none;
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        background:#2b2b2b;
+        padding:20px;
+        border-radius:10px;
+        z-index:1000;
+    "
+>
+
+    <p>
+        Incoming voice request
+    </p>
+
+    <button id="accept-voice">
+        Accept
+    </button>
+
+</div>
+
 <audio
     id="remote-audio"
     autoplay
+    hidden
 ></audio>
+
+</body>
 </html>
