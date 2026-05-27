@@ -1,0 +1,50 @@
+.lobby-panel {
+    background: #2b2b2b;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.lobby-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.room-input {
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.notification {
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    background: #2563eb;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    color: white;
+
+    z-index: 1000;
+}

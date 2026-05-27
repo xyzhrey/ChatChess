@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Realtime Chess</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/lobby.css">
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+      <div class="lobby-panel">
+
+    <h2>Lobby</h2>
+
+    <div class="lobby-controls">
+
+        <input
+            type="text"
+            id="room-input"
+            class="room-input"
+            placeholder="Enter room ID"
+        >
+
+        <button id="join-room-btn">
+            Join Room
+        </button>
+
+    </div>
+
+</div>
+        <div class="header">
+            <h1>Realtime Chess</h1>
+
+            <button id="voice-btn">
+                Enable Voice
+            </button>
+        </div>
+
+        <div class="game-layout">
+
+            <div class="board-section">
+
+                <div class="player-info">
+                    <span id ="top-player">Black</span>
+
+                    <span id="black-timer">05:00</span>
+                </div>
+
+                <div id="board"></div>
+
+                <div class="player-info">
+                    <span id = "bottom-player">White</span>
+                    <span id="white-timer">05:00</span>
+                </div>
+
+            </div>
+
+            <div class="sidebar">
+
+                <div class="panel">
+                    <h3>Status</h3>
+                    <div id="status"></div>
+                </div>
+
+                <div class="panel">
+                    <h3>Moves</h3>
+                    <div id="moves"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- SOCKET.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- CHESS.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+
+    <!-- CHESSBOARD -->
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+
+    <!-- APP FILES -->
+    <script src="js/socket.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/voice.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
