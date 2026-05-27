@@ -71,3 +71,60 @@ button {
     max-height: 400px;
     overflow-y: auto;
 }
+
+#chat-container {
+
+
+    width: 320px;
+
+    margin-top: 20px;
+
+    background: #1e1e1e;
+
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+#chat-messages {
+
+    height: 200px;
+
+    overflow-y: auto;
+
+    background: #2b2b2b;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    margin-bottom: 10px;
+}
+
+.chat-message {
+
+    margin-bottom: 8px;
+
+    word-wrap: break-word;
+}
+
+#chat-input-area {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+#chat-input {
+
+    flex: 1;
+
+    padding: 8px;
+}
+
+#send-btn {
+
+    padding: 8px 12px;
+
+    cursor: pointer;
+}

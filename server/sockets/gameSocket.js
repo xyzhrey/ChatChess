@@ -246,6 +246,27 @@ function registerGameSocket(io, socket) {
                     )
                 }
             )
+            socket.on(
+    "chat-message",
+    (message) => {
+
+        const room =
+            getRoom(roomId)
+
+        const sender =
+            room.players[
+                socket.id
+            ]
+
+        io.to(roomId).emit(
+            "chat-message",
+            {
+                sender,
+                message
+            }
+        )
+    }
+)
         }
 
         catch (error) {
