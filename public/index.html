@@ -37,6 +37,9 @@
             Join Room
         </button>
 
+        <button id="help-btn">
+    Help
+</button>
     </div>
 
 </div>
@@ -127,7 +130,7 @@
     <script src="js/voice.js"></script>
     
     <script src="js/chat.js"></script>
-      
+    <script src="js/help.js"></script>
     
 
 <div
@@ -160,6 +163,60 @@
     autoplay
     hidden
 ></audio>
+<div
+    id="help-modal"
+    style="
+        display:none;
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        background:#1e1e1e;
+        color:white;
+        padding:20px;
+        border-radius:12px;
+        width:300px;
+        z-index:2000;
+        box-shadow:0 0 10px rgba(0,0,0,0.5);
+    "
+>
 
-</body>
+    <h3>
+        Website Features
+    </h3>
+
+    <ul>
+
+        <li>
+            Share room ID with friend
+        </li>
+
+        <li>
+            White player initiates voice
+        </li>
+
+        <li>
+            Tap or drag pieces to move
+        </li>
+
+        <li>
+            Realtime synchronized gameplay
+        </li>
+
+        <li>
+            Voice works best with earphones
+        </li>
+
+        <li>
+            Chat updates instantly
+        </li>
+
+    </ul>
+
+    <button id="close-help">
+        Close
+    </button>
+
+</div>
+ </body>
 </html>
